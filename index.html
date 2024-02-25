@@ -5,108 +5,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
+        <div class="nav">
+            <h1><img src="./static/view-dashboard.svg" alt="icon">Dashboard</h1>
+            <ul>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Home</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Profile</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Messages</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">History</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Tasks</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Communities</li>
+            </ul>
+            <ul>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Settings</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Support</li>
+                <li><img class="icon" src="./static/account.svg" alt="icon">Privacy</li>
+            </ul>
+        </div>
+
         <div class="header">
             <div class="header-row1">
-                <input type="search">
-                <p>Morgan Oakley</p>
+                <label><input type="search" placeholder="Search..."></label>
+                <ul>
+                    <li><img class="icon" src="./static/bell-outline.svg" alt="icon"></li>
+                    <li><img class="profile-picture-small" src="./static/profile.png" alt="profile picture"></li>
+                    <li>Morgan Oakley</li>
+                </ul>
             </div>
             <div class="header-row2">
-                <p>Hi there,</p>
-                <p>Morgan Oakley (@morgan)</p>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                <div class="profile">
+                    <img class="profile-picture-large" src="./static/profile.png" alt="profile picture">
+                    <div class="greeting">
+                        <p>Hi there,</p>
+                        <h2>Morgan Oakley (@morgan)</h2>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
             </div>
         </div>
-        <div class="dashboard">
-            <h1>Dashboard</h1>
-            <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Messages</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
-            </ul>
-            <ul>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
-            </ul>
-        </div>
+
         <div class="main">
             <div class="projects">
-                <h2>Your Projects</h2>
+                <h3>Your Projects</h3>
                 <div class="project-grid">
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                     <div class="project-item">
-                        <h3>Super Cool Project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
-                            excepturi velit quasi ipsa.</p>
+                        <div class="project-details">
+                            <h4>Super Cool Project</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos magnam placeat in tempora
+                                excepturi velit quasi ipsa.</p>
+                        </div>
+                        <div class="project-icons">
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                            <a href="#"><img class="icon" src="./static/bell-outline.svg" alt="icon"></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="announcements">
-                <h2>Announcements</h2>
+                <h3>Announcements</h3>
                 <div class="announcement-list">
                     <div class="announcement-item">
-                        <h4>Site Maintenance</h4>
+                        <h5>Site Maintenance</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fugit?</p>
                     </div>
                     <div class="announcement-item">
-                        <h4>Community Share Day</h4>
+                        <h5>Community Share Day</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fugit?</p>
                     </div>
                     <div class="announcement-item">
-                        <h4>Updated Privacy Policy</h4>
+                        <h5>Updated Privacy Policy</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fugit?</p>
                     </div>
                 </div>
             </div>
             <div class="trending">
-                <h2>Trending</h2>
+                <h3>Trending</h3>
                 <div class="trending-list">
                     <div class="trending-item">
-                        <p>@tegan<br>World Peace Builder</p>
+                        <img class="profile-picture-small" src="./static/profile.png" alt="profile picture">
+                        <div class="greeting">
+                            <h4>@tegan</h4>
+                            <p>World Peace Builder</p>
+                        </div>
                     </div>
                     <div class="trending-item">
-                        <p>@morgan<br>Super Cool Project</p>
+                        <img class="profile-picture-small" src="./static/profile.png" alt="profile picture">
+                        <div class="greeting">
+                            <h4>@morgan</h4>
+                            <p>Super Cool Project</p>
+                        </div>
                     </div>
                     <div class="trending-item">
-                        <p>@kendall<br>Life Changing App</p>
+                        <img class="profile-picture-small" src="./static/profile.png" alt="profile picture">
+                        <div class="greeting">
+                            <h4>@kendall</h4>
+                            <p>Life Changing App</p>
+                        </div>
                     </div>
                     <div class="trending-item">
-                        <p>@alex<br>No Traffic Maker</p>
+                        <img class="profile-picture-small" src="./static/profile.png" alt="profile picture">
+                        <div class="greeting">
+                            <h4>@alex</h4>
+                            <p>No Traffic Maker</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
