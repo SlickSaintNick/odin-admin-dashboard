@@ -22,12 +22,13 @@
 
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 200px 100vh;
     grid-template-areas:
         "nav header"
         "nav main";
 }
 
+/* Set the size of images */
 .container img.icon {
     height: 1.6rem;
 }
@@ -44,8 +45,6 @@
     background-color: var(--color-bg1);
     color: var(--color-txt-dark);
     grid-area: header;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .header .header-row1 {
@@ -162,8 +161,9 @@
     background-color: var(--color-bg2);
     grid-area: main;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    /* grid-template-rows: ; */
+    grid-template-rows: repeat(2, minmax(auto, 1fr));
     grid-template-areas:
         "projects announcements"
         "projects trending";
@@ -253,7 +253,7 @@
     background-color: var(--color-bg1);
     box-shadow: 0.1rem 0.1rem var(--color-shadow);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
 }
 
 .main .trending .trending-item {
@@ -261,5 +261,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    /* padding: 1rem 0rem 0.5rem 0rem; */
 }
