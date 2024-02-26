@@ -14,6 +14,14 @@
     --color-txt-light: #FFFFFF;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
 .container {
     color: var(--color-txt-dark);
     background: var(--color-bg2);
@@ -22,10 +30,12 @@
 
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 200px 100vh;
+    grid-template-rows: 200px 1fr;
     grid-template-areas:
         "nav header"
         "nav main";
+    width: 100vw;
+    height: 100%;
 }
 
 /* Set the size of images */
@@ -48,7 +58,6 @@
 }
 
 .header .header-row1 {
-    /* flex: 1; */
     height: 33%;
     display: flex;
     justify-content: space-around;
@@ -64,7 +73,7 @@
     width: 100%;
     border: none;
     border-radius: 1rem;
-    height: 1.5rem;
+    height: 2.5rem;
     margin-left: 5rem;
     padding: 1rem;
 }
@@ -121,10 +130,12 @@
 .header .header-row2 button {
     background-color: var(--color-accent1);
     color: var(--color-txt-light);
+    font-size: 1.2rem;
+    font-weight: 550;
     border: none;
-    border-radius: 1rem;
-    height: 2rem;
-    width: 5rem;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 8rem;
 }
 
 .nav {
@@ -134,13 +145,15 @@
 }
 
 .nav ul {
+    font-size: 1.4rem;
+    font-weight: 550;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     list-style: none;
 }
 
 .nav ul li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.3rem;
 }
 
 .nav img.icon {
@@ -161,8 +174,9 @@
 .main {
     background-color: var(--color-bg2);
     grid-area: main;
+    /* max-height: calc(100vh - 200px); */
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     /* grid-template-rows: repeat(2, minmax(auto, 1fr)); */
     grid-template-areas:
@@ -181,10 +195,12 @@
 }
 
 .main .projects .project-grid {
+    max-height: calc(100vh - 200px);
+    /* overflow: auto; */
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 300px;
 }
 
 .main .projects .project-item {
@@ -254,14 +270,15 @@
     background-color: var(--color-bg1);
     box-shadow: 0.1rem 0.1rem var(--color-shadow);
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .main .trending .trending-item {
+    font-size: 1rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     /* padding: 1rem 0rem 0.5rem 0rem; */
 }
