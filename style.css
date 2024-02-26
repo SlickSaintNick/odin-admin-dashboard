@@ -35,7 +35,7 @@ body {
         "nav header"
         "nav main";
     width: 100vw;
-    height: 100%;
+    height: 100vh;
 }
 
 /* Set the size of images */
@@ -173,20 +173,27 @@ body {
 
 .main {
     background-color: var(--color-bg2);
+    display: flex;
+
+    /* Grid setup 
     grid-area: main;
-    /* max-height: calc(100vh - 200px); */
+    max-height: calc(100vh - 200px); 
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    /* grid-template-rows: repeat(2, minmax(auto, 1fr)); */
     grid-template-areas:
         "projects announcements"
-        "projects trending";
+        "projects trending"; */
 }
 
-.main .projects {
-    grid-area: projects;
+.main .main-left {
+    /* grid-area: projects; */
+    flex: 70%;
     margin: 1rem;
+}
+
+.main .main-left .project-grid {
+    margin: 1.3rem;
 }
 
 .main h3 {
@@ -194,8 +201,8 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.main .projects .project-grid {
-    max-height: calc(100vh - 200px);
+.main .main-left .project-grid {
+    /* max-height: calc(100vh - 200px); */
     /* overflow: auto; */
     display: grid;
     gap: 0.5rem;
@@ -203,7 +210,7 @@ body {
     grid-auto-rows: 300px;
 }
 
-.main .projects .project-item {
+.main .main-left .project-item {
     /* display: flex;
     flex-direction: column; */
     background-color: var(--color-bg1);
@@ -215,13 +222,13 @@ body {
     border-left: solid 0.5rem var(--color-accent2);
 }
 
-.main .projects .project-item .project-details {
-    height: 145px;
+.main .main-left .project-item .project-details {
+    height: 90%;
     overflow: hidden;
     position: relative;
 }
 
-.main .projects .project-item .project-details:after {
+.main .main-left .project-item .project-details:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -231,15 +238,23 @@ body {
     height: 20%;
 }
 
-.main .projects .project-item .project-icons {
-    height: 55px;
+.main .main-left .project-item .project-icons {
+    height: 10%;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
 }
 
+.main .main-right {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
 .main .announcements {
-    grid-area: announcements;
+    /* grid-area: announcements; */
     margin: 1rem;
 }
 
@@ -261,7 +276,7 @@ body {
 }
 
 .main .trending {
-    grid-area: trending;
+    /* grid-area: trending; */
     margin: 1rem;
 }
 
