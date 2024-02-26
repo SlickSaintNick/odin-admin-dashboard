@@ -6,37 +6,37 @@
 
 :root {
     --color-bg1: #FFFFFF;
-    --color-bg2: #E2E8F0;
+    --color-bg2: #C5D2D3;
     --color-shadow: #D8DEE6;
-    --color-accent1: #1992D4;
-    --color-accent2: #F0B429;
+    --color-accent1: #3A606E;
+    --color-accent2: #FA9F42;
     --color-txt-dark: #000000;
     --color-txt-light: #FFFFFF;
 }
 
-html {
+/* html {
     height: 100dvh;
-}
+} */
 
 body {
     height: 100dvh;
 }
 
 .container {
-    color: var(--color-txt-dark);
-    background: var(--color-bg2);
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-
     display: grid;
     grid-template-columns: 280px 1fr;
     grid-template-rows: 180px 1fr;
     grid-template-areas:
         "nav header"
         "nav main";
-    width: 100vw;
+
+    color: var(--color-txt-dark);
+    background: var(--color-bg2);
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+
+    /* width: 100vw; */
     height: 100%;
-    overflow: hidden;
 }
 
 /* Set the size of images */
@@ -140,6 +140,15 @@ body {
     width: 6rem;
 }
 
+.header .header-row2 button:hover {
+    background-color: var(--color-accent2)
+}
+
+.header .header-row2 button:active {
+    background-color: var(--color-accent2);
+    box-shadow: 0 0 5px 1px var(--color-accent2)
+}
+
 .nav {
     grid-area: nav;
     background-color: var(--color-accent1);
@@ -213,6 +222,8 @@ body {
 .main .projects .project-item {
     /* display: flex;
     flex-direction: column; */
+    position: relative;
+    z-index: 2;
     background-color: var(--color-bg1);
     color: var(--color-txt-dark);
     margin: 0.5rem;
@@ -220,6 +231,23 @@ body {
     border-radius: 0.4rem;
     box-shadow: 0.1rem 0.1rem var(--color-shadow);
     border-left: solid 0.5rem var(--color-accent2);
+}
+
+.main .projects .project-item:after {
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+
+.main .projects .project-item:hover:after {
+    width: 100%;
+    background: var(--color-accent2);
 }
 
 .main .projects .project-item .project-details {
@@ -236,6 +264,7 @@ body {
     right: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     height: 20%;
+    z-index: -2;
 }
 
 .main .projects .project-item .project-icons {
